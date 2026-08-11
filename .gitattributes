@@ -1,0 +1,58 @@
+# Normalize line endings for text files. Binaries below opt out via -text so
+# git never attempts CRLF conversion on them (which would corrupt the file).
+* text=auto
+
+# Unreal Engine assets
+*.uasset binary
+*.umap   binary
+*.uexp   binary
+*.ubulk  binary
+*.uptnl  binary
+*.upack  binary
+*.umeta  binary
+
+# Source art / DCC files
+*.fbx   binary
+*.glb   binary
+*.gltf  binary
+*.obj   binary
+*.blend binary
+*.dae   binary
+*.abc   binary
+
+# Textures
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.tga  binary
+*.psd  binary
+*.tif  binary
+*.tiff binary
+*.bmp  binary
+*.exr  binary
+*.hdr  binary
+
+# Audio
+*.wav  binary
+*.mp3  binary
+*.ogg  binary
+*.flac binary
+*.aif  binary
+*.aiff binary
+
+# Video
+*.mp4  binary
+*.mov  binary
+*.avi  binary
+*.webm binary
+
+# Fonts & archives
+*.ttf binary
+*.otf binary
+*.zip binary
+*.7z  binary
+
+# Text-ish project files — keep these diffable
+*.uproject text
+*.ini      text
+*.md       text
