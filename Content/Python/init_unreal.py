@@ -23,6 +23,10 @@ def enable_anim_update(map_name="", is_template=False):
 
 	unreal.log(f"[anim-in-editor] enabled on {count} skeletal mesh component(s)")
 
+	# Other stuff we want
+	editor_world = unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_editor_world()
+	unreal.SystemLibrary.execute_console_command(editor_world, "ShowFlag.Splines 0")
+
 _on_map_opened.add_callable(enable_anim_update)
 
 enable_anim_update(unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_editor_world().get_name())
